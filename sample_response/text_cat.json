@@ -1,0 +1,42 @@
+{
+  "events": [
+    {
+      "attributes": {
+        "count": "3"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/text_cat_copy"
+        },
+        "catNum": "3",
+        "category": "Knowledge & Expertise",
+        "id": "123456790",
+        "score": "1.000000"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/text_cat_copy"
+        },
+        "catNum": "2",
+        "category": "Loyalty",
+        "id": "123456790",
+        "score": "2.000000"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/text_cat_copy"
+        },
+        "catNum": "1",
+        "category": "very, +thank, helpful, +great, +service",
+        "id": "123456790",
+        "score": "2.000000"
+      }
+    }
+  ]
+}

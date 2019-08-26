@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "attributes": {
+        "count": "1"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/sentiment_copy"
+        },
+        "id": "123456790",
+        "probability": "0.771429",
+        "sentiment": "Positive"
+      }
+    }
+  ]
+}

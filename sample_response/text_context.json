@@ -1,0 +1,43 @@
+{
+  "events": [
+    {
+      "attributes": {
+        "count": "2"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/text_context_copy"
+        },
+        "id": "123456790",
+        "locEnd": "214",
+        "locStart": "197",
+        "tag": "nlpNounGroup",
+        "tagLen": "12",
+        "term": "satisfied customer",
+        "termID": "2",
+        "termLen": "18",
+        "wordEnd": "34",
+        "wordStart": "32"
+      }
+    },
+    {
+      "event": {
+        "attributes": {
+          "window": "text_analytics/cq1/text_context_copy"
+        },
+        "id": "123456790",
+        "locEnd": "118",
+        "locStart": "105",
+        "tag": "nlpNounGroup",
+        "tagLen": "12",
+        "term": "store purchase",
+        "termID": "1",
+        "termLen": "14",
+        "wordEnd": "18",
+        "wordStart": "16"
+      }
+    }
+  ]
+}

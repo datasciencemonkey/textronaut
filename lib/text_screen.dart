@@ -8,6 +8,7 @@ class TextScreen extends StatefulWidget {
 }
 
 class _TextScreenState extends State<TextScreen> {
+  String textValue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,14 +45,15 @@ class _TextScreenState extends State<TextScreen> {
                   ),
                   decoration: kTextFieldInputDecoration,
                   onChanged: (value) {
-                    print(value);
+                    textValue = value;
                   },
                 ),
               ),
               FlatButton(
                 padding: EdgeInsets.only(top: 70),
                 onPressed: () {
-                  print("Analysis Complete!!");
+//                  TODO: Push textValue to ESP. Inject Event into ESP Project
+//                TODO: Follow this above with getting responses on the initstate from the ResultsPage
                   Navigator.push(
                     context,
                     MaterialPageRoute(
