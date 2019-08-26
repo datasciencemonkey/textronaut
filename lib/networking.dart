@@ -18,9 +18,12 @@ class NetworkHelper {
     }
   }
 
-  Future postData(payload) async {
-    http.Response response = await http.post(url,
-        headers: {"Content-Type": "application/json"}, body: payload);
+  Future putData(dynamic payload) async {
+    print(url);
+    print(jsonEncode(payload));
+    http.Response response = await http.put(url,
+        body: jsonEncode(payload),
+        headers: {'Content-Type': 'application/json'});
     if (response.statusCode == 200) {
       String data = response.body;
       return data;

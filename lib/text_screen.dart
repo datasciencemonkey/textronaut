@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'results_page.dart';
-import 'networking.dart';
+import 'esp_inject.dart';
+import 'package:random_string/random_string.dart';
+import 'dart:math' show Random;
 
 class TextScreen extends StatefulWidget {
   @override
@@ -10,6 +12,7 @@ class TextScreen extends StatefulWidget {
 
 class _TextScreenState extends State<TextScreen> {
   String textValue;
+  String id = randomAlphaNumeric(10);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,8 +55,13 @@ class _TextScreenState extends State<TextScreen> {
               ),
               FlatButton(
                 padding: EdgeInsets.only(top: 70),
-                onPressed: () {
-//                  TODO: Push textValue to ESP. Inject Event into ESP Project
+                onPressed: () async {
+                  print(id);
+                  print(textValue);
+                  Map<String, dynamic> body = {
+                    '_body': {'id': id, 'response': textValue}
+                  };
+                  var espData = await ESPModel().putTextData(body);
 //                TODO: Follow this above with getting responses on the initstate from the ResultsPage
                   Navigator.push(
                     context,
