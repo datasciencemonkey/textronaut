@@ -13,6 +13,7 @@ class TextScreen extends StatefulWidget {
 class _TextScreenState extends State<TextScreen> {
   String textValue;
   String id = randomAlphaNumeric(10);
+  final TextEditingController _controller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +44,7 @@ class _TextScreenState extends State<TextScreen> {
               Container(
                 padding: EdgeInsets.all(20.0),
                 child: TextField(
+                  controller: _controller,
                   maxLines: 14,
                   style: TextStyle(
                     color: Colors.black,
@@ -73,6 +75,10 @@ class _TextScreenState extends State<TextScreen> {
                       ),
                     ),
                   );
+                  setState(() {
+                    id = randomAlphaNumeric(10);
+                    _controller.clear();
+                  });
                 },
                 child: Text(
                   '⎈ ➤ Analyze with Viya',
