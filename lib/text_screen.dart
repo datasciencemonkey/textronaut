@@ -12,7 +12,7 @@ class TextScreen extends StatefulWidget {
 
 class _TextScreenState extends State<TextScreen> {
   String textValue;
-  String id = randomAlphaNumeric(10);
+  String id = '';
   final TextEditingController _controller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -58,6 +58,7 @@ class _TextScreenState extends State<TextScreen> {
               FlatButton(
                 padding: EdgeInsets.only(top: 70),
                 onPressed: () async {
+                  id = randomAlphaNumeric(10);
                   print(id);
                   print(textValue);
                   Map<String, dynamic> body = {
@@ -68,15 +69,10 @@ class _TextScreenState extends State<TextScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultsPage(
-                        bmiResult: '',
-                        resultText: '',
-                        interpretation: '',
-                      ),
+                      builder: (context) => ResultsPage(id: id),
                     ),
                   );
                   setState(() {
-                    id = randomAlphaNumeric(10);
                     _controller.clear();
                   });
                 },

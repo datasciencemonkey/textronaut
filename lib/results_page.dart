@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'reusable_card.dart';
+import 'sentiment.dart';
+
+String sentimentResult = "Positive";
+String category = "some category";
 
 class ResultsPage extends StatelessWidget {
-  ResultsPage(
-      {@required this.bmiResult,
-      @required this.resultText,
-      @required this.interpretation});
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  ResultsPage({@required this.id});
+  final String id;
+
+  void parseSentimentResults(id) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,15 +40,15 @@ class ResultsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      resultText.toUpperCase(),
+                      sentimentResult.toUpperCase(),
                       style: kResultTextStyle,
                     ),
                     Text(
-                      bmiResult,
+                      id,
                       style: kBMITextStyle,
                     ),
                     Text(
-                      interpretation,
+                      category,
                       style: kBodyTextStyle,
                       textAlign: TextAlign.center,
                     )
