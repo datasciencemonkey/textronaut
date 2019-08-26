@@ -40,3 +40,7 @@
     }
   ]
 }
+
+
+
+{events: {count: 1, event: {window: text_analytics/cq1/sentiment_copy, id: {$t: sJWiRC8kPJ}, probability: {$t: 0.692308}, sentiment: {$t: Positive}}}}

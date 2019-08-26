@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'results_page.dart';
+import 'loading_screen.dart';
 import 'esp_inject.dart';
 import 'package:random_string/random_string.dart';
-import 'dart:math' show Random;
+//import 'dart:math' show Random;
 
 class TextScreen extends StatefulWidget {
   @override
@@ -65,11 +65,10 @@ class _TextScreenState extends State<TextScreen> {
                     '_body': {'id': id, 'response': textValue}
                   };
                   var espData = await ESPModel().putTextData(body);
-//                TODO: Follow this above with getting responses on the initstate from the ResultsPage
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultsPage(id: id),
+                      builder: (context) => LoadingScreen(id: id),
                     ),
                   );
                   setState(() {

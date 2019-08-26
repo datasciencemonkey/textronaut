@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-
-class TextMine {
-  TextMine({this.textValue});
-  final String textValue;
-}
+//import 'package:flutter/material.dart';
+//
+//class TextMine {
+//  TextMine({this.textValue});
+//  final String textValue;
+//}
