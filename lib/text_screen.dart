@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'results_page.dart';
+import 'networking.dart';
 
 class TextScreen extends StatefulWidget {
   @override
