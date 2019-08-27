@@ -66,11 +66,11 @@ class _ResultsPageState extends State<ResultsPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Your review was rated $sentimentText',
+                      'Your review was rated ',
                       style: kResultTextStyle,
                     ),
                     Text(
-                      'someval',
+                      '$sentimentText',
                       style: kBMITextStyle,
                     ),
                     Text(
